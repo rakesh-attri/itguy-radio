@@ -127,7 +127,7 @@ export default function Player() {
         events: {
           onReady: () => {
             setPlayerState((prev) => ({ ...prev, ready: true }));
-            playerRef.current?.setVolume(75);
+            playerRef.current?.setVolume(100);
           },
           onStateChange: (event: any) => {
             const state = event.data;
@@ -203,13 +203,14 @@ export default function Player() {
   const progress = playerState.duration > 0 ? playerState.currentTime / playerState.duration : 0;
 
   return (
-    <div className="w-full max-w-xl">
+    <div className="w-full max-w-2xl">
       <div ref={containerRef} className="pointer-events-none absolute h-px w-px overflow-hidden opacity-0" />
 
-      <div className="glass group relative flex items-center gap-4 rounded-full p-3 pr-5">
-        <div className="relative h-20 w-20 shrink-0">
+      <div className="glass group relative flex items-center gap-5 rounded-full p-4 pr-6">
+        {/* Album Art */}
+        <div className="relative h-24 w-24 shrink-0">
           <div
-            className="h-full w-full overflow-hidden rounded-full shadow-lg ring-1 ring-white/20"
+            className="h-full w-full overflow-hidden rounded-full shadow-lg ring-2 ring-[#00a1e0]/30"
             style={{
               animation: playerState.playing ? 'spin-slow 8s linear infinite' : 'none',
             }}
@@ -221,20 +222,21 @@ export default function Player() {
                 className="h-full w-full object-cover"
               />
             ) : (
-              <div className="grid h-full w-full place-items-center bg-gradient-to-br from-green-500 via-blue-600 to-purple-500">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="opacity-90">
+              <div className="grid h-full w-full place-items-center bg-gradient-to-br from-[#00a1e0] via-[#0070d2] to-[#00509e]">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="white" className="opacity-90">
                   <path d="M12 3v10.55A4 4 0 1014 17V7h4V3z" />
                 </svg>
               </div>
             )}
           </div>
-          <div className="pointer-events-none absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/70 ring-2 ring-white/40" />
+          <div className="pointer-events-none absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/70 ring-2 ring-white/30" />
         </div>
 
+        {/* Track Info + Seek */}
         <div className="min-w-0 flex-1">
-          <p className="truncate text-[15px] font-semibold text-white drop-shadow-sm">{currentSong.title}</p>
-          <p className="truncate text-[13px] text-white/70">{currentSong.artist || currentSong.album}</p>
-          <div className="mt-2">
+          <p className="truncate text-base font-semibold text-white drop-shadow-sm">{currentSong.title}</p>
+          <p className="truncate text-sm text-white/60">{currentSong.artist || currentSong.album}</p>
+          <div className="mt-3">
             <div
               className="seek-bar group/bar relative h-2 w-full cursor-pointer"
               role="slider"
@@ -247,28 +249,29 @@ export default function Player() {
                 seekTo(Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width)));
               }}
             >
-              <div className="progress-bar absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 rounded-full">
+              <div className="progress-bar absolute inset-x-0 top-1/2 h-1.5 -translate-y-1/2 rounded-full">
                 <div className="progress-bar-fill h-full rounded-full" style={{ width: `${progress * 100}%` }} />
               </div>
               <div
-                className="seek-thumb absolute top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow"
+                className="seek-thumb absolute top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow"
                 style={{ left: `${progress * 100}%` }}
               />
             </div>
-            <div className="mt-1.5 text-left text-[11px] tabular-nums text-white/60">
+            <div className="mt-2 text-left text-xs tabular-nums text-white/50">
               {formatTime(playerState.currentTime)} / {formatTime(playerState.duration)}
             </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-1">
+        {/* Controls */}
+        <div className="flex items-center gap-2">
           <button
             type="button"
             aria-label="Previous track"
             onClick={playPrev}
-            className="grid h-9 w-9 place-items-center rounded-full text-white/80 transition hover:bg-white/15 hover:text-white active:scale-95"
+            className="grid h-11 w-11 place-items-center rounded-full text-white/80 transition hover:bg-[#00a1e0]/20 hover:text-white active:scale-95"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
               <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
             </svg>
           </button>
@@ -278,14 +281,14 @@ export default function Player() {
             aria-pressed={playerState.playing}
             onClick={togglePlay}
             disabled={!playerState.ready}
-            className="grid h-11 w-11 place-items-center rounded-full bg-white text-black shadow-lg transition hover:scale-105 active:scale-95 disabled:opacity-50"
+            className="grid h-14 w-14 place-items-center rounded-full bg-white text-black shadow-lg transition hover:scale-105 active:scale-95 disabled:opacity-50"
           >
             {playerState.playing ? (
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M7 5h4v14H7zm6 0h4v14h-4z" />
               </svg>
             ) : (
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8 5v14l11-7z" />
               </svg>
             )}
@@ -294,9 +297,9 @@ export default function Player() {
             type="button"
             aria-label="Next track"
             onClick={playNext}
-            className="grid h-9 w-9 place-items-center rounded-full text-white/80 transition hover:bg-white/15 hover:text-white active:scale-95"
+            className="grid h-11 w-11 place-items-center rounded-full text-white/80 transition hover:bg-[#00a1e0]/20 hover:text-white active:scale-95"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
               <path d="M16 6h2v12h-2zm-2 6L5.5 6v12z" />
             </svg>
           </button>

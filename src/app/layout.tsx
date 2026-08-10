@@ -13,21 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IT Guy Radio",
-  description: "90s Bollywood bangers for developers who code to the beat.",
-  applicationName: "IT Guy Radio",
+  title: "Salesforce QA Music",
+  description: "90s Bollywood bangers for Salesforce QA engineers who test to the beat.",
+  applicationName: "Salesforce QA Music",
   openGraph: {
-    title: "IT Guy Radio",
-    description: "90s Bollywood bangers for developers who code to the beat.",
-    url: "https://itguy-radio.vercel.app",
-    siteName: "IT Guy Radio",
+    title: "Salesforce QA Music",
+    description: "90s Bollywood bangers for Salesforce QA engineers who test to the beat.",
+    siteName: "Salesforce QA Music",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "IT Guy Radio",
-    description: "90s Bollywood bangers for developers who code to the beat.",
+    title: "Salesforce QA Music",
+    description: "90s Bollywood bangers for Salesforce QA engineers who test to the beat.",
   },
 };
 

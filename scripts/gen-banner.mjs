@@ -1,0 +1,102 @@
+import fs from 'fs';
+import path from 'path';
+
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="50%" stop-color="#0d1f3c"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f2a4a"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <g fill="white" opacity="0.3">
+    <circle cx="120" cy="60" r="1"/><circle cx="300" cy="40" r="0.8"/><circle cx="500" cy="80" r="1.2"/>
+    <circle cx="700" cy="30" r="0.7"/><circle cx="900" cy="70" r="1"/><circle cx="1100" cy="50" r="0.9"/>
+    <circle cx="1300" cy="35" r="1.1"/><circle cx="1500" cy="65" r="0.8"/><circle cx="1700" cy="45" r="1"/>
+  </g>
+  <g opacity="0.06" fill="white"><ellipse cx="350" cy="160" rx="150" ry="30"/><ellipse cx="1400" cy="140" rx="120" ry="25"/></g>
+  <g fill="#152238" opacity="0.7">
+    <rect x="80" y="380" width="45" height="220" rx="2"/><rect x="140" y="400" width="40" height="200" rx="2"/>
+    <rect x="200" y="350" width="55" height="250" rx="2"/><rect x="270" y="390" width="50" height="210" rx="2"/>
+    <rect x="340" y="360" width="60" height="240" rx="2"/>
+  </g>
+  <g transform="translate(420,150)">
+    <rect x="0" y="0" width="65" height="450" fill="#1a3050" rx="3"/>
+    <rect x="5" y="8" width="55" height="435" fill="#0d1f3c" rx="2"/>
+    <g fill="#00a1e0" opacity="0.12">
+      <rect x="12" y="18" width="10" height="8" rx="1"/><rect x="28" y="18" width="10" height="8" rx="1"/><rect x="44" y="18" width="10" height="8" rx="1"/>
+      <rect x="12" y="36" width="10" height="8" rx="1"/><rect x="28" y="36" width="10" height="8" rx="1"/><rect x="44" y="36" width="10" height="8" rx="1"/>
+      <rect x="12" y="54" width="10" height="8" rx="1"/><rect x="28" y="54" width="10" height="8" rx="1"/><rect x="44" y="54" width="10" height="8" rx="1"/>
+      <rect x="12" y="72" width="10" height="8" rx="1"/><rect x="28" y="72" width="10" height="8" rx="1"/><rect x="44" y="72" width="10" height="8" rx="1"/>
+      <rect x="12" y="90" width="10" height="8" rx="1"/><rect x="28" y="90" width="10" height="8" rx="1"/><rect x="44" y="90" width="10" height="8" rx="1"/>
+      <rect x="12" y="108" width="10" height="8" rx="1"/><rect x="28" y="108" width="10" height="8" rx="1"/><rect x="44" y="108" width="10" height="8" rx="1"/>
+    </g>
+    <circle cx="32" cy="-5" r="4" fill="#00a1e0" opacity="0.8" filter="url(#glow)"/>
+  </g>
+  <g fill="#12253d" opacity="0.5">
+    <rect x="530" y="420" width="50" height="180" rx="2"/><rect x="600" y="380" width="45" height="220" rx="2"/>
+    <rect x="660" y="400" width="55" height="200" rx="2"/><rect x="730" y="370" width="40" height="230" rx="2"/>
+    <rect x="790" y="410" width="50" height="190" rx="2"/>
+  </g>
+  <g fill="#12253d" opacity="0.4">
+    <rect x="1100" y="390" width="50" height="210" rx="2"/><rect x="1170" y="360" width="45" height="240" rx="2"/>
+    <rect x="1240" y="400" width="55" height="200" rx="2"/><rect x="1320" y="370" width="40" height="230" rx="2"/>
+    <rect x="1380" y="410" width="50" height="190" rx="2"/><rect x="1450" y="380" width="60" height="220" rx="2"/>
+  </g>
+  <g fill="#152238" opacity="0.6">
+    <rect x="1550" y="350" width="55" height="250" rx="2"/><rect x="1620" y="390" width="50" height="210" rx="2"/>
+    <rect x="1690" y="370" width="45" height="230" rx="2"/><rect x="1760" y="400" width="55" height="200" rx="2"/>
+    <rect x="1830" y="360" width="50" height="240" rx="2"/>
+  </g>
+  <rect x="0" y="600" width="1920" height="480" fill="url(#ground)" opacity="0.5"/>
+  <g transform="translate(700,450)">
+    <rect x="0" y="0" width="520" height="8" rx="4" fill="#1a3050"/>
+    <rect x="0" y="-60" width="520" height="60" rx="6" fill="#0d1f3c" stroke="#1a3050" stroke-width="2"/>
+    <rect x="10" y="-52" width="500" height="44" rx="3" fill="#0a1628"/>
+    <text x="260" y="-25" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#00a1e0" font-weight="bold" opacity="0.7">DREAMFORCE</text>
+    <g fill="#00a1e0" opacity="0.08"><rect x="180" y="10" width="160" height="120" rx="4"/><rect x="360" y="30" width="120" height="100" rx="4"/></g>
+    <circle cx="260" cy="-120" r="8" fill="#00a1e0" opacity="0.6" filter="url(#glow)"/>
+    <circle cx="200" cy="-115" r="5" fill="#00a1e0" opacity="0.4"/>
+    <circle cx="320" cy="-115" r="5" fill="#00a1e0" opacity="0.4"/>
+    <line x1="260" y1="-112" x2="200" y2="-110" stroke="#00a1e0" stroke-width="1" opacity="0.3"/>
+    <line x1="260" y1="-112" x2="320" y2="-110" stroke="#00a1e0" stroke-width="1" opacity="0.3"/>
+  </g>
+  <g transform="translate(150,520)">
+    <rect x="0" y="0" width="120" height="5" rx="2" fill="#1a3050"/>
+    <rect x="0" y="-40" width="120" height="40" rx="4" fill="#0d1f3c" stroke="#1a3050" stroke-width="1"/>
+    <text x="60" y="-15" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#00a1e0" opacity="0.5">SESSION</text>
+  </g>
+  <g transform="translate(1650,500)">
+    <rect x="0" y="0" width="120" height="5" rx="2" fill="#1a3050"/>
+    <rect x="0" y="-40" width="120" height="40" rx="4" fill="#0d1f3c" stroke="#1a3050" stroke-width="1"/>
+    <text x="60" y="-15" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#00a1e0" opacity="0.5">KEYNOTE</text>
+  </g>
+  <g opacity="0.3">
+    <ellipse cx="960" cy="680" rx="300" ry="40" fill="#00a1e0" opacity="0.05"/>
+    <ellipse cx="960" cy="700" rx="200" ry="25" fill="#00a1e0" opacity="0.04"/>
+  </g>
+  <g transform="translate(580,560)" opacity="0.15">
+    <path d="M0 20 Q10 0 20 20 Q30 0 40 20" fill="none" stroke="#22c55e" stroke-width="2"/>
+    <path d="M60 20 Q70 5 80 20 Q90 5 100 20" fill="none" stroke="#22c55e" stroke-width="2"/>
+  </g>
+  <g transform="translate(1250,560)" opacity="0.15">
+    <path d="M0 20 Q10 0 20 20 Q30 0 40 20" fill="none" stroke="#22c55e" stroke-width="2"/>
+    <path d="M60 20 Q70 5 80 20 Q90 5 100 20" fill="none" stroke="#22c55e" stroke-width="2"/>
+  </g>
+  <g opacity="0.2">
+    <circle cx="100" cy="750" r="30" fill="#22c55e" opacity="0.1"/>
+    <circle cx="120" cy="740" r="25" fill="#22c55e" opacity="0.08"/>
+    <circle cx="1820" cy="760" r="35" fill="#22c55e" opacity="0.1"/>
+    <circle cx="1840" cy="750" r="28" fill="#22c55e" opacity="0.08"/>
+  </g>
+  <rect x="0" y="900" width="1920" height="180" fill="#0a1628" opacity="0.8"/>
+</svg>`;
+
+fs.writeFileSync(path.join(process.cwd(), 'public', 'banner.svg'), svg);
+console.log('Banner generated at public/banner.svg');
