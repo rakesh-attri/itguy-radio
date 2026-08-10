@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react';
 import songs from '@/lib/songs.json';
-import Visualizer from './Visualizer';
 
 interface Song {
   id: number;
@@ -262,16 +261,10 @@ export default function Player() {
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/70 ring-3 ring-white/30" />
         </div>
 
-        {/* Track Info + Visualizer + Seek */}
+        {/* Track Info + Seek */}
         <div className="min-w-0 flex-1">
           <p className="truncate text-lg font-bold text-white drop-shadow-sm">{currentSong.title}</p>
           <p className="truncate text-sm text-white/60">{currentSong.artist || currentSong.album}</p>
-          
-          {/* Music Visualizer */}
-          <div className="mt-2 h-8 w-full overflow-hidden rounded-lg bg-white/5">
-            <Visualizer isPlaying={playerState.playing} barCount={32} />
-          </div>
-
           <div className="mt-3">
             <div
               className="seek-bar group/bar relative h-2.5 w-full cursor-pointer"
