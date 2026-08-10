@@ -142,3 +142,13 @@ body {
   opacity: 0;
   transition: opacity 0.2s ease;
 }
+
+/* Mobile: always show seek thumb */
+@media (max-width: 640px) {
+  .seek-thumb {
+    opacity: 1;
+  }
+  .seek-bar {
+    padding: 8px 0;
+  }
+}
