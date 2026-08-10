@@ -11,11 +11,11 @@ export default function Home() {
       <Clock />
       <Links />
 
-      <div className="mt-[12vh] flex flex-col items-center px-6">
+      <div className="mt-[8vh] sm:mt-[12vh] flex flex-col items-center px-4 sm:px-6">
         <Logo />
       </div>
 
-      <div className="mb-[22vh] flex w-full justify-center px-4 sm:px-6">
+      <div className="mb-[15vh] sm:mb-[22vh] flex w-full justify-center px-3 sm:px-6">
         <Player />
       </div>
     </main>

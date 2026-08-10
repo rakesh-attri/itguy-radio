@@ -38,8 +38,18 @@ body {
 .hero-bg {
   background-image: url('/banner.svg');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
+  /* Ensures it covers the viewport on all devices */
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+@media (max-width: 640px) {
+  .hero-bg {
+    background-size: cover;
+    background-position: center top;
+  }
 }
 
 .hero-bg::after {
@@ -48,11 +58,24 @@ body {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(10, 10, 18, 0.3) 0%,
-    rgba(10, 10, 18, 0.1) 30%,
-    rgba(10, 10, 18, 0.2) 60%,
-    rgba(10, 10, 18, 0.8) 100%
+    rgba(10, 10, 18, 0.2) 0%,
+    rgba(10, 10, 18, 0.05) 25%,
+    rgba(10, 10, 18, 0.1) 50%,
+    rgba(10, 10, 18, 0.6) 80%,
+    rgba(10, 10, 18, 0.95) 100%
   );
+}
+
+@media (max-width: 640px) {
+  .hero-bg::after {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 18, 0.3) 0%,
+      rgba(10, 10, 18, 0.1) 20%,
+      rgba(10, 10, 18, 0.4) 60%,
+      rgba(10, 10, 18, 0.9) 100%
+    );
+  }
 }
 
 @keyframes spin-slow {

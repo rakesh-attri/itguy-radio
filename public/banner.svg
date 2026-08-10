@@ -1,176 +1,144 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 562" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 600" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
 <defs>
-<linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-<stop offset="0%" stop-color="#0B3D91"/>
-<stop offset="40%" stop-color="#1A73E8"/>
-<stop offset="100%" stop-color="#00A1E0"/>
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#0a0a1a"/>
+<stop offset="50%" stop-color="#111128"/>
+<stop offset="100%" stop-color="#0d1b2a"/>
 </linearGradient>
-<linearGradient id="stageGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-<stop offset="0%" stop-color="#1E3A5F"/>
-<stop offset="100%" stop-color="#0D1B2A"/>
-</linearGradient>
-<radialGradient id="spotlight1" cx="50%" cy="30%" r="50%">
-<stop offset="0%" stop-color="#FFD700" stop-opacity="0.4"/>
-<stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+<radialGradient id="glow1" cx="20%" cy="40%" r="35%">
+<stop offset="0%" stop-color="#00a1e0" stop-opacity="0.15"/>
+<stop offset="100%" stop-color="#00a1e0" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="spotlight2" cx="50%" cy="30%" r="50%">
-<stop offset="0%" stop-color="#00A1E0" stop-opacity="0.3"/>
-<stop offset="100%" stop-color="#00A1E0" stop-opacity="0"/>
+<radialGradient id="glow2" cx="80%" cy="50%" r="30%">
+<stop offset="0%" stop-color="#7c3aed" stop-opacity="0.12"/>
+<stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
 </radialGradient>
-<linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-<stop offset="0%" stop-color="#FFFFFF"/>
-<stop offset="100%" stop-color="#E0F0FF"/>
+<radialGradient id="glow3" cx="50%" cy="70%" r="40%">
+<stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.08"/>
+<stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#00a1e0" stop-opacity="0"/>
+<stop offset="30%" stop-color="#00a1e0" stop-opacity="0.5"/>
+<stop offset="70%" stop-color="#7c3aed" stop-opacity="0.5"/>
+<stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
 </linearGradient>
+<linearGradient id="wave2" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#0ea5e9" stop-opacity="0"/>
+<stop offset="40%" stop-color="#0ea5e9" stop-opacity="0.3"/>
+<stop offset="60%" stop-color="#a855f7" stop-opacity="0.3"/>
+<stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="vinyl" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" stop-color="#1a1a2e"/>
+<stop offset="50%" stop-color="#16213e"/>
+<stop offset="100%" stop-color="#0f0f23"/>
+</linearGradient>
+<filter id="blur1" x="-50%" y="-50%" width="200%" height="200%">
+<feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+</filter>
+<filter id="blur2" x="-50%" y="-50%" width="200%" height="200%">
+<feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+</filter>
 </defs>
 
-<!-- Sky -->
-<rect width="1200" height="562" fill="url(#skyGrad)"/>
+<!-- Deep space background -->
+<rect width="1400" height="600" fill="url(#bg)"/>
 
-<!-- Stars -->
-<g fill="white" opacity="0.3">
-<circle cx="100" cy="50" r="1.5"/><circle cx="200" cy="80" r="1"/><circle cx="350" cy="30" r="1.5"/>
-<circle cx="500" cy="60" r="1"/><circle cx="650" cy="40" r="2"/><circle cx="800" cy="70" r="1"/>
-<circle cx="950" cy="45" r="1.5"/><circle cx="1100" cy="55" r="1"/><circle cx="150" cy="120" r="1"/>
-<circle cx="400" cy="100" r="1.5"/><circle cx="700" cy="90" r="1"/><circle cx="1050" cy="110" r="1.5"/>
+<!-- Ambient glows -->
+<rect width="1400" height="600" fill="url(#glow1)"/>
+<rect width="1400" height="600" fill="url(#glow2)"/>
+<rect width="1400" height="600" fill="url(#glow3)"/>
+
+<!-- Subtle noise texture (dots) -->
+<g opacity="0.03" fill="white">
+<circle cx="50" cy="80" r="1"/><circle cx="150" cy="40" r="0.8"/><circle cx="250" cy="120" r="1.2"/>
+<circle cx="350" cy="60" r="0.7"/><circle cx="450" cy="140" r="1"/><circle cx="550" cy="30" r="0.9"/>
+<circle cx="650" cy="100" r="1.1"/><circle cx="750" cy="50" r="0.8"/><circle cx="850" cy="130" r="1"/>
+<circle cx="950" cy="70" r="0.7"/><circle cx="1050" cy="110" r="1.2"/><circle cx="1150" cy="45" r="0.9"/>
+<circle cx="1250" cy="90" r="1"/><circle cx="1350" cy="65" r="0.8"/>
+<circle cx="100" cy="200" r="0.9"/><circle cx="300" cy="250" r="1.1"/><circle cx="500" cy="180" r="0.7"/>
+<circle cx="700" cy="220" r="1"/><circle cx="900" cy="190" r="0.8"/><circle cx="1100" cy="240" r="1.2"/>
+<circle cx="1300" cy="210" r="0.9"/><circle cx="200" cy="320" r="1"/><circle cx="400" cy="350" r="0.7"/>
+<circle cx="600" cy="300" r="1.1"/><circle cx="800" cy="340" r="0.9"/><circle cx="1000" cy="310" r="1"/>
+<circle cx="1200" cy="360" r="0.8"/><circle cx="150" cy="420" r="1.2"/><circle cx="350" cy="450" r="0.7"/>
+<circle cx="550" cy="400" r="1"/><circle cx="750" cy="440" r="0.9"/><circle cx="950" cy="410" r="1.1"/>
+<circle cx="1150" cy="460" r="0.8"/><circle cx="1350" cy="430" r="1"/>
 </g>
 
-<!-- Spotlights -->
-<ellipse cx="300" cy="200" rx="200" ry="300" fill="url(#spotlight1)"/>
-<ellipse cx="900" cy="200" rx="200" ry="300" fill="url(#spotlight2)"/>
+<!-- Sound wave ribbons - flowing curves -->
+<path d="M0,350 Q200,280 400,320 T800,300 T1200,340 T1400,310" fill="none" stroke="url(#wave1)" stroke-width="1.5" opacity="0.4"/>
+<path d="M0,370 Q250,310 500,350 T1000,320 T1400,360" fill="none" stroke="url(#wave2)" stroke-width="1" opacity="0.3"/>
+<path d="M0,330 Q300,260 600,300 T1100,280 T1400,320" fill="none" stroke="url(#wave1)" stroke-width="0.8" opacity="0.25"/>
 
-<!-- Dreamforce City Skyline -->
-<g opacity="0.2" fill="#FFFFFF">
-<!-- Salesforce Tower -->
-<rect x="520" y="80" width="40" height="200" rx="3"/>
-<rect x="510" y="100" width="60" height="180" rx="2"/>
-<!-- Other buildings -->
-<rect x="460" y="140" width="30" height="140" rx="2"/>
-<rect x="490" y="120" width="25" height="160" rx="2"/>
-<rect x="570" y="150" width="35" height="130" rx="2"/>
-<rect x="610" y="130" width="28" height="150" rx="2"/>
-<rect x="420" y="170" width="25" height="110" rx="2"/>
-<rect x="650" y="160" width="30" height="120" rx="2"/>
-<!-- Moscone Center hint -->
-<rect x="380" y="220" width="300" height="40" rx="5"/>
+<!-- Floating music notes - scattered artistically -->
+<g opacity="0.15" fill="none" stroke="#00a1e0" stroke-width="1.5">
+<!-- Note 1 -->
+<g transform="translate(120,160) scale(0.8)">
+<ellipse cx="0" cy="12" rx="7" ry="5" transform="rotate(-20)" fill="#00a1e0"/>
+<line x1="6" y1="10" x2="6" y2="-18" stroke-width="1.5"/>
+<path d="M6,-18 Q16,-22 14,-10" fill="#00a1e0"/>
+</g>
+<!-- Note 2 -->
+<g transform="translate(320,200) scale(0.6)">
+<ellipse cx="0" cy="12" rx="7" ry="5" transform="rotate(-20)" fill="#7c3aed"/>
+<line x1="6" y1="10" x2="6" y2="-18" stroke="#7c3aed" stroke-width="1.5"/>
+<path d="M6,-18 Q16,-22 14,-10" fill="#7c3aed"/>
+</g>
+<!-- Note 3 - double -->
+<g transform="translate(1100,180) scale(0.7)">
+<ellipse cx="0" cy="12" rx="6" ry="4" transform="rotate(-15)" fill="#0ea5e9"/>
+<ellipse cx="20" cy="10" rx="6" ry="4" transform="rotate(-15)" fill="#0ea5e9"/>
+<line x1="5" y1="10" x2="5" y2="-16" stroke="#0ea5e9" stroke-width="1.5"/>
+<line x1="25" y1="8" x2="25" y2="-18" stroke="#0ea5e9" stroke-width="1.5"/>
+<line x1="5" y1="-16" x2="25" y2="-18" stroke="#0ea5e9" stroke-width="2"/>
+</g>
 </g>
 
-<!-- Ground / Stage -->
-<rect y="380" width="1200" height="182" fill="url(#stageGrad)"/>
-<rect y="375" width="1200" height="10" fill="#00A1E0" opacity="0.6" rx="2"/>
-
-<!-- Stage lights -->
-<circle cx="200" cy="395" r="4" fill="#FFD700" opacity="0.8"/>
-<circle cx="400" cy="395" r="4" fill="#00A1E0" opacity="0.8"/>
-<circle cx="600" cy="395" r="4" fill="#FF6B35" opacity="0.8"/>
-<circle cx="800" cy="395" r="4" fill="#00A1E0" opacity="0.8"/>
-<circle cx="1000" cy="395" r="4" fill="#FFD700" opacity="0.8"/>
-
-<!-- Salesforce Cloud Logo -->
-<g transform="translate(1050, 60)">
-<ellipse cx="50" cy="35" rx="48" ry="28" fill="url(#cloudGrad)" opacity="0.9"/>
-<ellipse cx="30" cy="28" rx="25" ry="20" fill="url(#cloudGrad)" opacity="0.9"/>
-<ellipse cx="70" cy="30" rx="22" ry="18" fill="url(#cloudGrad)" opacity="0.9"/>
-<text x="50" y="42" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#00A1E0" text-anchor="middle">SF</text>
+<!-- Equalizer bars - left cluster -->
+<g opacity="0.12" filter="url(#blur1)">
+<rect x="60" y="380" width="4" height="40" rx="2" fill="#00a1e0"/>
+<rect x="70" y="360" width="4" height="60" rx="2" fill="#00a1e0"/>
+<rect x="80" y="340" width="4" height="80" rx="2" fill="#0ea5e9"/>
+<rect x="90" y="355" width="4" height="65" rx="2" fill="#0ea5e9"/>
+<rect x="100" y="370" width="4" height="50" rx="2" fill="#7c3aed"/>
 </g>
 
-<!-- Person (QA Engineer) - centered, sitting with laptop -->
-<g transform="translate(550, 180)">
-<!-- Chair -->
-<rect x="-30" y="140" width="60" height="8" rx="4" fill="#333"/>
-<rect x="-25" y="148" width="4" height="60" fill="#444"/>
-<rect x="21" y="148" width="4" height="60" fill="#444"/>
-<rect x="-20" y="200" width="30" height="4" rx="2" fill="#444"/>
-<rect x="10" y="200" width="30" height="4" rx="2" fill="#444"/>
-<!-- Back support -->
-<rect x="-28" y="100" width="56" height="45" rx="8" fill="#222"/>
-
-<!-- Body -->
-<rect x="-20" y="105" width="40" height="40" rx="5" fill="#1A73E8"/>
-<!-- Salesforce logo on shirt -->
-<text x="0" y="130" font-family="Arial" font-size="10" fill="white" text-anchor="middle" font-weight="bold">SF</text>
-
-<!-- Legs -->
-<rect x="-15" y="145" width="12" height="55" rx="4" fill="#1E3A5F"/>
-<rect x="3" y="145" width="12" height="55" rx="4" fill="#1E3A5F"/>
-<!-- Shoes -->
-<ellipse cx="-9" cy="202" rx="10" ry="5" fill="#333"/>
-<ellipse cx="9" cy="202" rx="10" ry="5" fill="#333"/>
-
-<!-- Head -->
-<circle cx="0" cy="85" r="25" fill="#D4A574"/>
-<!-- Hair -->
-<path d="M-25,80 Q-25,55 0,55 Q25,55 25,80" fill="#2C1810"/>
-<!-- Smile -->
-<path d="M-8,92 Q0,100 8,92" stroke="#8B4513" stroke-width="2" fill="none"/>
-<!-- Eyes -->
-<circle cx="-8" cy="82" r="3" fill="#2C1810"/>
-<circle cx="8" cy="82" r="3" fill="#2C1810"/>
-<!-- Glasses -->
-<circle cx="-8" cy="82" r="6" stroke="#333" stroke-width="1.5" fill="none"/>
-<circle cx="8" cy="82" r="6" stroke="#333" stroke-width="1.5" fill="none"/>
-<line x1="-2" y1="82" x2="2" y2="82" stroke="#333" stroke-width="1.5"/>
-
-<!-- Headphones -->
-<path d="M-28,78 Q-30,50 0,48 Q30,50 28,78" stroke="#FFD700" stroke-width="4" fill="none"/>
-<circle cx="-28" cy="82" r="8" fill="#FFD700"/>
-<circle cx="28" cy="82" r="8" fill="#FFD700"/>
-<circle cx="-28" cy="82" r="4" fill="#333"/>
-<circle cx="28" cy="82" r="4" fill="#333"/>
-
-<!-- Laptop -->
-<rect x="-45" y="120" width="90" height="3" rx="1" fill="#666"/>
-<rect x="-40" y="90" width="80" height="32" rx="3" fill="#333"/>
-<!-- Laptop screen -->
-<rect x="-36" y="94" width="72" height="24" rx="2" fill="#0B3D91"/>
-<!-- Code on screen -->
-<text x="-28" y="106" font-family="monospace" font-size="5" fill="#00FF88">assert</text>
-<text x="-28" y="113" font-family="monospace" font-size="5" fill="#FFD700">  .isEqual(</text>
-<text x="-28" y="120" font-family="monospace" font-size="5" fill="#00A1E0">    actual,</text>
-<text x="-28" y="127" font-family="monospace" font-size="5" fill="#FF6B35">    expected);</text>
-
-<!-- Arms on laptop -->
-<path d="M-20,120 L-40,100" stroke="#D4A574" stroke-width="8" stroke-linecap="round"/>
-<path d="M20,120 L40,100" stroke="#D4A574" stroke-width="8" stroke-linecap="round"/>
+<!-- Equalizer bars - right cluster -->
+<g opacity="0.12" filter="url(#blur1)">
+<rect x="1280" y="375" width="4" height="45" rx="2" fill="#7c3aed"/>
+<rect x="1290" y="355" width="4" height="65" rx="2" fill="#a855f7"/>
+<rect x="1300" y="345" width="4" height="75" rx="2" fill="#a855f7"/>
+<rect x="1310" y="365" width="4" height="55" rx="2" fill="#7c3aed"/>
+<rect x="1320" y="380" width="4" height="40" rx="2" fill="#0ea5e9"/>
 </g>
 
-<!-- Music Notes floating -->
-<g fill="#FFD700" opacity="0.7">
-<path d="M450,220 L450,250 L465,245 L465,215 Z"/>
-<circle cx="440" cy="252" r="6"/>
-<text x="480" y="230" font-size="24" font-family="serif">&#9835;</text>
-</g>
-<g fill="#00A1E0" opacity="0.6">
-<path d="M680,200 L680,230 L695,225 L695,195 Z"/>
-<circle cx="670" cy="232" r="6"/>
-<text x="700" y="210" font-size="20" font-family="serif">&#9833;</text>
-</g>
-<g fill="#FF6B35" opacity="0.5">
-<text x="420" y="260" font-size="28" font-family="serif">&#9834;</text>
+<!-- Vinyl record - subtle, large, background element -->
+<g transform="translate(1150, 300)" opacity="0.06">
+<circle cx="0" cy="0" r="120" fill="none" stroke="white" stroke-width="0.5"/>
+<circle cx="0" cy="0" r="100" fill="none" stroke="white" stroke-width="0.3"/>
+<circle cx="0" cy="0" r="80" fill="none" stroke="white" stroke-width="0.5"/>
+<circle cx="0" cy="0" r="60" fill="none" stroke="white" stroke-width="0.3"/>
+<circle cx="0" cy="0" r="40" fill="none" stroke="white" stroke-width="0.5"/>
+<circle cx="0" cy="0" r="15" fill="white" opacity="0.3"/>
+<circle cx="0" cy="0" r="5" fill="white" opacity="0.5"/>
 </g>
 
-<!-- Confetti -->
-<g opacity="0.8">
-<rect x="100" y="150" width="8" height="4" fill="#FFD700" transform="rotate(30,104,152)"/>
-<rect x="180" y="100" width="6" height="3" fill="#00A1E0" transform="rotate(-20,183,101)"/>
-<rect x="250" y="130" width="7" height="3" fill="#FF6B35" transform="rotate(45,253,131)"/>
-<rect x="950" y="120" width="8" height="4" fill="#FFD700" transform="rotate(-35,954,122)"/>
-<rect x="1020" y="160" width="6" height="3" fill="#00A1E0" transform="rotate(15,1023,161)"/>
-<rect x="1100" y="100" width="7" height="3" fill="#FF6B35" transform="rotate(-50,1103,101)"/>
-<rect x="350" y="80" width="5" height="3" fill="#00FF88" transform="rotate(60,352,81)"/>
-<rect x="850" y="90" width="5" height="3" fill="#FFD700" transform="rotate(-40,852,91)"/>
+<!-- Headphone silhouette - center top -->
+<g transform="translate(700, 80)" opacity="0.08" fill="none" stroke="white" stroke-width="2">
+<path d="M-50,0 Q-55,-40 0,-50 Q55,-40 50,0"/>
+<rect x="-58" y="-5" width="16" height="28" rx="8"/>
+<rect x="42" y="-5" width="16" height="28" rx="8"/>
 </g>
 
-<!-- Title -->
-<text x="600" y="460" font-family="'Segoe UI',Arial,sans-serif" font-size="36" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="3" filter="drop-shadow(0 2px 8px rgba(0,0,0,0.5))">
-Salesforce QA Radio
-</text>
-<text x="600" y="495" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#00A1E0" text-anchor="middle" letter-spacing="6" text-transform="uppercase">
-DREAMFORCE EDITION
-</text>
+<!-- Gradient line at bottom -->
+<rect x="0" y="520" width="1400" height="1" fill="url(#wave1)" opacity="0.3"/>
 
-<!-- Subtle pulse rings from headphones -->
-<circle cx="522" cy="263" r="35" stroke="#FFD700" stroke-width="1" fill="none" opacity="0.3"/>
-<circle cx="522" cy="263" r="50" stroke="#FFD700" stroke-width="0.5" fill="none" opacity="0.15"/>
-<circle cx="678" cy="263" r="35" stroke="#FFD700" stroke-width="1" fill="none" opacity="0.3"/>
-<circle cx="678" cy="263" r="50" stroke="#FFD700" stroke-width="0.5" fill="none" opacity="0.15"/>
+<!-- Subtle vignette -->
+<rect width="1400" height="600" fill="url(#bg)" opacity="0.4"/>
+<radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+<stop offset="0%" stop-color="transparent"/>
+<stop offset="100%" stop-color="#0a0a1a" stop-opacity="0.5"/>
+</radialGradient>
+<rect width="1400" height="600" fill="url(#vignette)"/>
 </svg>
