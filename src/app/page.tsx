@@ -15,7 +15,7 @@ export default function Home() {
         <Logo />
       </div>
 
-      <div className="mb-[18vh] flex w-full justify-center px-6">
+      <div className="mb-[22vh] flex w-full justify-center px-4 sm:px-6">
         <Player />
       </div>
     </main>
