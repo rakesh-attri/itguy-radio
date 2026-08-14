@@ -30,9 +30,9 @@
     "album": "",
     "duration": 311,
     "previewUrl": "https://p.scdn.co/mp3-preview/4713f44527edb815ccc4b4b1e834fb4c32bbac03",
-    "coverUrl": "https://img.youtube.com/vi/KraIQ85y68s/mqdefault.jpg",
-    "youtubeId": "KraIQ85y68s",
-    "youtubeTitle": "MUJHE RAAT DIN BAS",
+    "coverUrl": "https://img.youtube.com/vi/DqkG0fuPiO0/mqdefault.jpg",
+    "youtubeId": "DqkG0fuPiO0",
+    "youtubeTitle": "\"Mujhe Raat Din Bas\" Lyrical Video | Sangharsh | Sonu Nigam | Akshay Kumar, Priety Zinta, Aman Verma",
     "spotifyUrl": "spotify:track:6Gk3mU3np8miLUtZjoIVCu"
   },
   {
@@ -174,9 +174,9 @@
     "album": "",
     "duration": 395,
     "previewUrl": "https://p.scdn.co/mp3-preview/419ca33f1c2e1c394c31f0ef2611764daa1ec050",
-    "coverUrl": "https://img.youtube.com/vi/3R13sEZkEBE/mqdefault.jpg",
-    "youtubeId": "3R13sEZkEBE",
-    "youtubeTitle": "मोहब्बत हो ना जाए (देखा जो तुमको) - अलका याग्निक - कुमार शानू - कसूर [2001]",
+    "coverUrl": "https://img.youtube.com/vi/SbnpXVOzf6g/mqdefault.jpg",
+    "youtubeId": "SbnpXVOzf6g",
+    "youtubeTitle": "Mohabbat Ho Na Jaye (Dekha Jo Tumko) | Kasoor | Alka Yagnik | Kumar Sanu | Nadeem-Shravan | Sameer",
     "spotifyUrl": "spotify:track:5Wkp9UUUbiDMR5e0toF6KN"
   },
   {
@@ -198,9 +198,9 @@
     "album": "",
     "duration": 345,
     "previewUrl": "https://p.scdn.co/mp3-preview/6c1c4a3c4c325f8b61c2a32990deba829c7283d9",
-    "coverUrl": "https://img.youtube.com/vi/fYJu99QV2j0/mqdefault.jpg",
-    "youtubeId": "fYJu99QV2j0",
-    "youtubeTitle": "Chakna Chakna - Lyrical Video | Himesh Reshammiya | Namastey London",
+    "coverUrl": "https://img.youtube.com/vi/Kt0f9md9-dk/mqdefault.jpg",
+    "youtubeId": "Kt0f9md9-dk",
+    "youtubeTitle": "Chakna Chakna - Official Video Song | Namastey London | Akshay Kumar & Katrina Kaif",
     "spotifyUrl": "spotify:track:0JYt03Y1nb8wHWxPBkVncG"
   },
   {
@@ -478,5 +478,89 @@
     "youtubeId": "E_SbwSe15y0",
     "youtubeTitle": "Ve Haaniyaan - Official Video | Ravi Dubey & Sargun Mehta | Danny | Avvy Sra | Dreamiyata Music",
     "spotifyUrl": "spotify:track:2C6CJGFLbisteRuY6Plb7b"
+  },
+  {
+    "id": 41,
+    "title": "Abhi Abhi (From \"Jism 2\")",
+    "artist": "KK, Shreya Ghoshal",
+    "album": "",
+    "duration": 342,
+    "previewUrl": "https://p.scdn.co/mp3-preview/122dad02a95a21309675bf3fbf6f953d0f3245e7",
+    "coverUrl": "https://img.youtube.com/vi/WdBGbkdJAkk/mqdefault.jpg",
+    "youtubeId": "WdBGbkdJAkk",
+    "youtubeTitle": "Abhi Abhi Toh Mile Ho Duet (LYRICS) - K.K, Shreya Ghoshal | Jism 2 | Arko |Sunny Leone,Randeep Hooda",
+    "spotifyUrl": "spotify:track:7eG7w9anLPs2h856uJG9kG"
+  },
+  {
+    "id": 42,
+    "title": "Tujhe Sochta Hoon",
+    "artist": "Pritam, KK, Sayeed Quadri",
+    "album": "",
+    "duration": 313,
+    "previewUrl": "https://p.scdn.co/mp3-preview/ae25cd22beddbc81d02f331d6e4b6f00cb6a8858",
+    "coverUrl": "https://img.youtube.com/vi/PkhfKq9m0Uo/mqdefault.jpg",
+    "youtubeId": "PkhfKq9m0Uo",
+    "youtubeTitle": "Tujhe Sochta Hoon (Lyrical Audio) | KK | Emraan Hashmi | Esha Gupta | Pritam | Jannat 2",
+    "spotifyUrl": "spotify:track:47l2Dd3XPBLio3kjbEMyDJ"
+  },
+  {
+    "id": 43,
+    "title": "Chhod Aaye Hum",
+    "artist": "Vishal Bhardwaj, Hariharan, Suresh Wadkar, Vinod Sehgal, KK",
+    "album": "",
+    "duration": 312,
+    "previewUrl": "https://p.scdn.co/mp3-preview/7c70d41bff50f97f0fef0422c5ac90943828481a",
+    "coverUrl": "https://img.youtube.com/vi/RraeHart9uY/mqdefault.jpg",
+    "youtubeId": "RraeHart9uY",
+    "youtubeTitle": "Chhod Aaye Hum - Maachis |Hariharan|Suresh Wadkar|Vinod Sehgal |KK |Vishal Bhardwaj",
+    "spotifyUrl": "spotify:track:0V1ydpcCmkLFvHuQ4cmCNz"
+  },
+  {
+    "id": 44,
+    "title": "Maine Dil Se Kaha",
+    "artist": "KK, Neelesh Misra",
+    "album": "",
+    "duration": 312,
+    "previewUrl": "https://p.scdn.co/mp3-preview/3c3367cb5efac83890f648d28328883d011fb870",
+    "coverUrl": "https://img.youtube.com/vi/eOorU_qvoiE/mqdefault.jpg",
+    "youtubeId": "eOorU_qvoiE",
+    "youtubeTitle": "Maine Dil Se Kaha with lyrics | Irrfan Khan Hit Song | K.K. | Rog | M M Kreem",
+    "spotifyUrl": "spotify:track:0dZjWF8uklfNUHiPS2vC6E"
+  },
+  {
+    "id": 45,
+    "title": "Tadap Tadap",
+    "artist": "KK, Dominique",
+    "album": "",
+    "duration": 397,
+    "previewUrl": "https://p.scdn.co/mp3-preview/9cb31802f385ceae6d10ba4ae9203fdebde9557e",
+    "coverUrl": "https://img.youtube.com/vi/YXKVgsfU_xw/mqdefault.jpg",
+    "youtubeId": "YXKVgsfU_xw",
+    "youtubeTitle": "Tadap Tadap ke | KK live | Hum dil de chuke sanam | Salman Khan | Aiswarya Rai | Viral |Trending |",
+    "spotifyUrl": "spotify:track:6n6hEYHXBzWfdSzBX20ZRw"
+  },
+  {
+    "id": 46,
+    "title": "Abhi Abhi",
+    "artist": "KK",
+    "album": "",
+    "duration": 342,
+    "previewUrl": "https://p.scdn.co/mp3-preview/cf620caca3cdd4a02a7c8be958cc52be128924e6",
+    "coverUrl": "https://img.youtube.com/vi/egrV2SC6WfE/mqdefault.jpg",
+    "youtubeId": "egrV2SC6WfE",
+    "youtubeTitle": "Abhi Abhi Toh Mile Ho Lyrics | Jism 2 | KK | Sunny Leone, Randeep Hooda, Arunnoday Singh |",
+    "spotifyUrl": "spotify:track:1tKhy83q8OsdcpZaX9N4Z2"
+  },
+  {
+    "id": 47,
+    "title": "Phir Mohabbat",
+    "artist": "Mohammed Irfan, Arijit Singh, Saim Bhat, Mithoon, Sayeed Quadri",
+    "album": "",
+    "duration": 329,
+    "previewUrl": "https://p.scdn.co/mp3-preview/619c52d884cdd1039c57c1b44e0fc46e8cc72003",
+    "coverUrl": "https://img.youtube.com/vi/ZZC9T31knpc/mqdefault.jpg",
+    "youtubeId": "ZZC9T31knpc",
+    "youtubeTitle": "Phir Mohabbat|Lyrics|Arijit Singh|Mohammed Irfan|Saim Bhat|Mithoon|Sayeed Quadri|Murder 2",
+    "spotifyUrl": "spotify:track:2b2HutIDmoeBnnKRWDLAtV"
   }
 ]
