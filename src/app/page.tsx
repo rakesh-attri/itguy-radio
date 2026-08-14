@@ -1,6 +1,5 @@
 import Clock from '@/components/Clock';
 import Links from '@/components/Links';
-import Logo from '@/components/Logo';
 import Player from '@/components/Player';
 import Visualizer from '@/components/Visualizer';
 
@@ -11,10 +10,6 @@ export default function Home() {
 
       <Clock />
       <Links />
-
-      <div className="mt-[8vh] sm:mt-[12vh] flex flex-col items-center px-4 sm:px-6">
-        <Logo />
-      </div>
 
       {/* Visualizer in middle of page */}
       <div className="flex w-full max-w-2xl justify-center px-4 sm:px-6">
